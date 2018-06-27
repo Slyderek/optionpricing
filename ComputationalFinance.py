@@ -651,7 +651,7 @@ class ComputationalFinance ( object ):
         L, Lx, Lxx = funcdict[rbf_function](eps, x, xi)
         P = np.dot(-inv(L), ((r - 0.5 * vol ** 2) * Lx + 0.5 * vol ** 2 * Lxx - r * L))
 
-        if boundary_condition == 'dirichlet_bc':   ## what'???
+        if boundary_condition == 'dirichlet_bc':
             def bcmin(init, t_i):
                 if init == 'ic_call':
                     return 0
